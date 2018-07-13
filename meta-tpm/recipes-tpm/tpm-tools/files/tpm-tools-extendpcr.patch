@@ -51,7 +51,7 @@ Index: tpm-tools-1.3.8/src/cmds/Makefile.am
  
  if TSS_LIB_IS_12
 @@ -33,4 +34,5 @@
- LDADD		=	$(top_builddir)/lib/libtpm_tspi.la -ltspi $(top_builddir)/lib/libtpm_unseal.la -ltpm_unseal -lcrypto
+ LDADD		=	$(top_builddir)/lib/libtpm_tspi.la -ltspi $(top_builddir)/lib/libtpm_unseal.la -ltpm_unseal -lcrypto @INTLLIBS@
  
  tpm_sealdata_SOURCES = tpm_sealdata.c
 +tpm_extendpcr_SOURCES = tpm_extendpcr.c
