@@ -11,7 +11,7 @@ PROVIDES = "${PACKAGES}"
 PVBASE := "${PV}"
 PV = "${PVBASE}.${SRCPV}"
 
-SRC_URI = "git://github.com/tpm2-software/${BPN}.git;protocol=git;branch=master;name=${BPN};destsuffix=${BPN}"
+SRC_URI = "https://github.com/tpm2-software/${BPN}.git;protocol=git;branch=master;name=${BPN};destsuffix=${BPN}"
 
 SRCREV = "${AUTOREV}"
 
