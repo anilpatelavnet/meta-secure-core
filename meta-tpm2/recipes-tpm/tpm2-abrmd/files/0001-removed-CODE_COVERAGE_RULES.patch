@@ -1,0 +1,78 @@
+From b1d2903c9c1c60f35779019226f01c06c89ae891 Mon Sep 17 00:00:00 2001
+From: Markus Pietrek <mpie@msc-ge.com>
+Date: Thu, 19 Dec 2019 13:28:02 +0100
+Subject: [PATCH] removed CODE_COVERAGE_RULES
+
+---
+ Makefile.am |  1 -
+ Makefile.in | 11 +++++------
+ 2 files changed, 5 insertions(+), 7 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index aef35b4..96ac6b0 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -167,7 +167,6 @@ dbusservicedir   = $(datadir)/dbus-1/system-services
+ dbusservice_DATA = dist/com.intel.tss2.Tabrmd.service
+ endif # HAVE_SYSTEMD
+ 
+-@CODE_COVERAGE_RULES@
+ @VALGRIND_CHECK_RULES@
+ VALGRIND_G_DEBUG = fatal-criticals,gc-friendly
+ VALGRIND_memcheck_FLAGS = --leak-check=full --show-leak-kinds=definite,indirect --track-origins=yes --error-exitcode=1
+diff --git a/Makefile.in b/Makefile.in
+index e61e5cf..45ce27d 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -160,7 +160,7 @@ src_libtss2_tcti_echo_la_OBJECTS =  \
+ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+-am__v_lt_1 = 
++am__v_lt_1 =
+ src_libtss2_tcti_tabrmd_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_1) $(noinst_LTLIBRARIES) \
+@@ -715,11 +715,11 @@ am__v_P_1 = :
+ AM_V_GEN = $(am__v_GEN_@AM_V@)
+ am__v_GEN_ = $(am__v_GEN_@AM_DEFAULT_V@)
+ am__v_GEN_0 = @echo "  GEN     " $@;
+-am__v_GEN_1 = 
++am__v_GEN_1 =
+ AM_V_at = $(am__v_at_@AM_V@)
+ am__v_at_ = $(am__v_at_@AM_DEFAULT_V@)
+ am__v_at_0 = @
+-am__v_at_1 = 
++am__v_at_1 =
+ DEFAULT_INCLUDES = -I.@am__isrc@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+@@ -733,7 +733,7 @@ LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ AM_V_CC = $(am__v_CC_@AM_V@)
+ am__v_CC_ = $(am__v_CC_@AM_DEFAULT_V@)
+ am__v_CC_0 = @echo "  CC      " $@;
+-am__v_CC_1 = 
++am__v_CC_1 =
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+@@ -741,7 +741,7 @@ LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
+ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
+ am__v_CCLD_0 = @echo "  CCLD    " $@;
+-am__v_CCLD_1 = 
++am__v_CCLD_1 =
+ SOURCES = $(src_libtss2_tcti_echo_la_SOURCES) \
+ 	$(src_libtss2_tcti_tabrmd_la_SOURCES) \
+ 	$(src_libutil_la_SOURCES) \
+@@ -4052,7 +4052,6 @@ uninstall-man: uninstall-man3 uninstall-man7 uninstall-man8
+ unit-count: check
+ 	sh scripts/unit-count.sh
+ 
+-@CODE_COVERAGE_RULES@
+ @VALGRIND_CHECK_RULES@
+ 
+ # This is a hack required to ensure that BUILT_SOURCES are generated before
+-- 
+2.20.1
+

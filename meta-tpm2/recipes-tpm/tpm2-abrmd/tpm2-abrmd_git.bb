@@ -7,6 +7,7 @@ PV = "${PVBASE}.${SRCPV}"
 
 SRC_URI += " \
     git://github.com/01org/${BPN}.git;protocol=git;branch=master;name=${BPN};destsuffix=${BPN} \
+    file://0001-removed-CODE_COVERAGE_RULES.patch \
     "
 
 def version_git(d):

@@ -1,0 +1,43 @@
+From b41ecfa2ab683a06ca5a627f4a4ff5c3a6c70ca0 Mon Sep 17 00:00:00 2001
+From: Markus Pietrek <mpie@msc-ge.com>
+Date: Thu, 19 Dec 2019 13:08:57 +0100
+Subject: [PATCH] removed @CODE_COVERAGE_RULES@
+
+---
+ Makefile.am | 4 ----
+ Makefile.in | 4 ----
+ 2 files changed, 8 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index d78d23f..2ee64e0 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -40,10 +40,6 @@ CLEANFILES =
+ MOSTLYCLEANFILES =
+ noinst_PROGRAMS =
+ 
+-### Add ax_* rules ###
+-# ax_code_coverage
+-@CODE_COVERAGE_RULES@
+-
+ # ax_doxygen
+ @DX_RULES@
+ MOSTLYCLEANFILES += $(DX_CLEANFILES)
+diff --git a/Makefile.in b/Makefile.in
+index efa2a3c..1905362 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -14631,10 +14631,6 @@ uninstall-man: uninstall-man3 uninstall-man7
+ .PRECIOUS: Makefile
+ 
+ 
+-### Add ax_* rules ###
+-# ax_code_coverage
+-@CODE_COVERAGE_RULES@
+-
+ # ax_doxygen
+ @DX_RULES@
+ @DOXYMAN_TRUE@$(DOXYMAN3): doxygen-doc
+-- 
+2.20.1
+
